@@ -4,6 +4,9 @@
       "source": "/api/:path*",
       "destination": "https://stayease-b1t0.onrender.com/api/:path*"
     },
-    { "source": "/(.*)", "destination": "/index.html" }
+    {
+      "source": "/((?!api/).*)",
+      "destination": "/index.html"
+    }
   ]
 }
