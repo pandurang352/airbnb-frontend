@@ -41,6 +41,9 @@ export default function Navbar() {
           {user ? (
             <>
               <Link to="/listings/new" className={linkCls}>Add Listing</Link>
+              <Link to="/wishlist" className={linkCls}>
+  ❤️ Wishlist
+</Link>
               <span className="text-sm text-gray-500">Hi, {user.username}</span>
               <button onClick={onLogout} className={linkCls}>Logout</button>
             </>
@@ -68,6 +71,7 @@ export default function Navbar() {
           {user ? (
             <>
               <Link to="/listings/new" className="block py-2">Add Listing</Link>
+              <Link to="/wishlist" className="block py-2" >Wishlist</Link>
               <button onClick={onLogout} className="block py-2">Logout</button>
             </>
           ) : (

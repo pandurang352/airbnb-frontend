@@ -7,6 +7,7 @@ import ListingDetails from "./pages/ListingDetails";
 import ListingForm from "./pages/ListingForm";
 import AuthPage from "./pages/AuthPage";
 import NotFound from "./pages/NotFound";
+import Wishlist from "./pages/Wishlist";
 
 export default function App() {
   return (
@@ -21,6 +22,9 @@ export default function App() {
           <Route path="/login" element={<AuthPage mode="login" />} />
           <Route path="/signup" element={<AuthPage mode="signup" />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="/wishlist"element={  <ProtectedRoute> <Wishlist /> </ProtectedRoute>
+  }
+/>
         </Routes>
       </main>
       <Footer />
